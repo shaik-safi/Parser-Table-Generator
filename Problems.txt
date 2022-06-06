@@ -1,0 +1,180 @@
+sample set 1
+rules
+A -> S B | B
+S -> a | B c | #
+B -> b | d
+nonterm_userdef
+A
+S
+B
+term_userdef
+a
+c
+b
+d
+--------------------------------------------------------------------------------
+
+sample set 2
+rules
+S -> A | B C
+A -> a | b
+B -> p | #
+C -> c
+nonterm_userdef
+A
+S
+B
+C
+term_userdef
+a
+c
+b
+p
+
+--------------------------------------------------------------------------------
+
+sample set 3
+rules
+S -> A B | C
+A -> a | b | #
+B-> p | #
+C -> c
+nonterm_userdef
+A
+S
+B
+C
+term_userdef
+a
+c
+b
+p
+
+--------------------------------------------------------------------------------
+
+sample set 4
+rules 
+S -> A B C | C
+A -> a | b B | #
+B -> p | #
+C -> c
+nonterm_userdef
+A
+S
+B
+C
+term_userdef
+a
+c
+b
+p
+
+--------------------------------------------------------------------------------
+
+sample set 5 (With left recursion)
+rules
+A -> B C c | g D B
+B -> b C D E | #
+C -> D a B | c a
+D -> # | d D
+E -> E a f | c
+nonterm_userdef
+A
+B
+C
+D
+E
+term_userdef
+a
+b
+c
+d
+f
+g
+
+--------------------------------------------------------------------------------
+
+sample set 6
+rules
+E -> T E'
+E' -> + T E' | #
+T -> F T'
+T' -> * F T' | #
+F -> ( E ) | id
+nonterm_userdef
+E'
+E'
+F
+T
+T'
+term_userdef
+id
++
+*
+(
+)
+
+--------------------------------------------------------------------------------
+
+sample set 7
+rules
+S -> A k O
+A -> A d | a B | a C
+C -> c
+B -> b B C | r
+
+nonterm_userdef
+A
+B
+C
+term_userdef
+k
+O
+d
+a
+c
+b
+r
+
+
+--------------------------------------------------------------------------------
+
+sample set 8
+rules 
+S -> NP VP
+NP -> P | PN | D N
+VP -> V NP
+N -> championship | ball | toss
+V -> is | want | won | played
+P -> me | I | you
+PN -> India | Australia | Steve | John
+D -> the | a | an
+
+nonterm_userdef 
+S
+NP
+VP
+N
+V
+P
+PN
+D
+term_userdef
+championship
+ball
+toss
+is
+want
+won
+played
+me
+I
+you
+India
+Australia
+Steve
+John
+the
+a
+an
+
